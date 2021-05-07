@@ -1,0 +1,20 @@
+@import 'mixin/mixin';
+
+@include b(media) {
+    overflow: hidden;
+    zoom: 1;
+
+    @include e(body) {
+        overflow: hidden;
+        zoom: 1;
+    }
+
+    @include e(('left', 'body', 'right')) {
+        display: table-cell;
+        vertical-align: top;
+    }
+
+    @include e(body) {
+        width: 10000px;
+    }
+}

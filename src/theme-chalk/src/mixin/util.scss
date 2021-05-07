@@ -1,0 +1,97 @@
+@mixin util-user-select($value) {
+    -moz-user-select: $value;
+    -webkit-user-select: $value;
+    -ms-user-select: $value;
+}
+
+@mixin util-clearfix {
+    $selector: &;
+
+    @at-root {
+        #{$selector}::before,
+        #{$selector}::after {
+            display: table;
+            content: '';
+        }
+        #{$selector}::after {
+            clear: both;
+        }
+    }
+}
+
+@mixin util-vertical-center {
+    $selector: &;
+
+    @at-root {
+        #{$selector}::after {
+            display: inline-block;
+            content: '';
+            height: 100%;
+            vertical-align: middle;
+        }
+    }
+}
+
+@mixin util-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.clear {
+    zoom: 1;
+
+    &::after {
+        content: ' ';
+        display: block;
+        clear: both;
+        height: 0;
+        font-size: 0;
+        visibility: hidden;
+    }
+}
+
+.iv-clearfix::after {
+    content: ' ';
+    display: block;
+    clear: both;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+}
+
+.iv-ellipsis {
+    display: inline-block;
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+.iv-multi-line-ellipsis {
+    position: relative;
+    overflow: hidden;
+    max-height: 3.6em;
+    padding-right: 0;
+    line-height: 1.2em;
+    text-align: justify;
+
+    &::before {
+        content: '...';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: #ffffff;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 1em;
+        height: 1em;
+        margin-top: 0.2em;
+        background: #ffffff;
+    }
+}

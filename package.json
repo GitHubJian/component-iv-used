@@ -1,0 +1,55 @@
+{
+    "name": "component-ive-used",
+    "version": "0.0.1",
+    "description": "Component I've used",
+    "main": "dist/component.common.js",
+    "module": "src/index.ts",
+    "style": "dist/css/index.css",
+    "scripts": {
+        "init": "rm -rf node_modules package-lock.json && npm install",
+        "dev": "NODE_ENV=development webpack serve"
+    },
+    "devDependencies": {
+        "@babel/core": "7.14.0",
+        "@babel/preset-env": "7.14.1",
+        "@soda/friendly-errors-webpack-plugin": "1.8.0",
+        "@vue/composition-api": "1.0.0-rc.8",
+        "babel-loader": "8.2.2",
+        "css-loader": "5.2.4",
+        "cssnano": "5.0.2",
+        "file-loader": "6.2.0",
+        "html-webpack-plugin": "5.3.1",
+        "mini-css-extract-plugin": "1.6.0",
+        "node-sass": "5.0.0",
+        "optimize-css-assets-webpack-plugin": "5.0.4",
+        "sass-loader": "11.0.1",
+        "style-loader": "^2.0.0",
+        "ts-loader": "9.1.2",
+        "typescript": "4.2.4",
+        "url-loader": "4.1.1",
+        "vue": "2.6.11",
+        "vue-loader": "15.9.3",
+        "vue-template-compiler": "2.6.11",
+        "webpack": "5.36.2",
+        "webpack-cli": "4.7.0",
+        "webpack-dev-server": "3.11.2"
+    },
+    "peerDependencies": {
+        "@vue/composition-api": "1.0.0-rc.8",
+        "vue": "2.6.11",
+        "vue-template-compiler": "2.6.11"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:GitHubJian/components-ive-used.git"
+    },
+    "files": [
+        "dist",
+        "src"
+    ],
+    "author": "xiaowensheng",
+    "license": "UNLICENSED",
+    "engines": {
+        "node": ">=10.0.0"
+    }
+}
